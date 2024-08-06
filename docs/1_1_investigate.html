@@ -375,6 +375,7 @@
 
 </div>
 <div id="correctMessage" class="correct-message">Correct!</div>
+<div id="wrongMessage" class="correct-message">Make sure the program is printing out the required output: It's a wonderful world! And also that they are enclosed with quotation marks just like in the previous code example.</div>
 </body>
 <script>
     const Confettiful = function(el) {
@@ -434,6 +435,9 @@
         new Confettiful(container);
         showCorrectMessage();
     }
+    else{
+        showWrongMessage();
+    }
   });
 
   function showCorrectMessage() {
@@ -446,6 +450,18 @@
     setTimeout(() => {
       messageEl.style.display = 'none';
     }, 4000); // Total duration to allow fade out to complete
+  }
+
+  function showWrongMessage() {
+    const messageEl = document.getElementById('wrongMessage');
+    messageEl.style.display = 'block';
+    messageEl.style.opacity = '1';
+    setTimeout(() => {
+      messageEl.style.opacity = '0';
+    }, 4000);
+    setTimeout(() => {
+      messageEl.style.display = 'none';
+    }, 8000); // Total duration to allow fade out to complete
   }
 </script>
 </html>
