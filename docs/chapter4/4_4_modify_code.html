@@ -481,7 +481,7 @@
         showCorrectMessage();
     }
     else{
-         $("#output").html("This does not seem right. Hint: Armour and Potion should not affect the damage variable as it should double each loop. You might want to use another variable 'real_damage' to calculate the damage to be applied to hp after being reduced by armour (when it breaks).");
+         $("#output").html("This does not seem right. <br>Hint 1: Make a new variable at the beginning called ‘potion’ and set it to 2.<br>Hint 2: At the beginning of a loop, check if damage is larger than hp and if so, deduct 1 from potion by ‘potion = potion -1’ and reset the value of hp as 100.");
     }
   });
 
