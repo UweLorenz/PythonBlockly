@@ -480,6 +480,10 @@
         new Confettiful(container);
         showCorrectMessage();
     }
+    else{
+         $("#output").html("This does not seem right. <br>Hint: Armour and Potion should not affect the damage variable as it should double each loop. You might want to use another variable 'real_damage' to calculate the damage to be applied to hp after being reduced by armour (when it breaks).");
+    }
+
   });
 
   function showCorrectMessage() {
